@@ -1,0 +1,12 @@
+#!/bin/bash
+
+INDEX=$1
+
+#if the index file was not accessed yet today, generate a new index and store it in the contents of .quotefetch/.temp/ACCESS
+if [ "$(date +%d)" != "$(stat -c %x ~/.config/quotefetch/quote_index | cut -d' ' -f1 | cut -d'-' -f3)" ];
+then
+	echo $(($RANDOM % 1774)) > ~/.config/quotefetch/quote_index
+fi
+#grab the index from the index file and output the quote of the day
+INDEX=$(cat ~/.config/quotefetch/quote_index)
+cat ~/.config/quotefetch/quotes.json | jq -r --argjson i $INDEX '.quotes[$i]["text"] + " -" + .quotes[$i]["author"]' | fold -s -w 60
