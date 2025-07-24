@@ -7093,8 +7093,12 @@
       "author": "Marcus Aurelius"
     },
     {
-      "text": " Lead me, O Zeus, and thou O Destiny, the way that I am bid by you to go: To follow I am ready. If I choose not, I make myself a wretch, and still must follow.",
+      "text": "Lead me, O Zeus, and thou O Destiny, the way that I am bid by you to go: To follow I am ready. If I choose not, I make myself a wretch, and still must follow.",
       "author": "Cleanthes"
+    },
+    {
+      "text": "Thanks for using Quotefetch! If you want to replace this message with your quote of the day, run\n`sudo touch -d 'yesterday' ~/.local/share/quotefetch/index` and re-run Quotefetch.",
+      "author": "ShineCastr"
     }
   ]
 }
